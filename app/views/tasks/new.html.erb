@@ -1,0 +1,11 @@
+<div class="container text-center col-md-12">
+  <h1>This is a new taks</h1>
+
+  <%= simple_form_for(@task, html: {class: "form-signin"}) do |f| %>
+
+    <%= f.input :content, autofocus: true, presence: true,
+                        label: false, placeholder: "Tell us the task"%>
+    <%= f.button :submit, "Create", class: "btn btn-primary btn-block" %>
+
+  <% end %>
+</div>

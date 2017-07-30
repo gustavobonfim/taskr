@@ -1,0 +1,9 @@
+<div class="container col-md-12">
+  <% @tasks.each do |task| %>
+    <div class="well">
+      <%= task.content %>
+      <hr />
+      <%= task.created_at %>
+    </div>
+  <% end %>
+</div>
