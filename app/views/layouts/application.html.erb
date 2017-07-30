@@ -10,17 +10,12 @@
 
   <body>
 
-    <div class="container-fluid">
+    <div class="container">
       <%= render 'layouts/nav_horizontal' %>
-      <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-xs-3 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
-          <%= render 'layouts/nav_vertical' %>
-        </div>
-        <div class="col-xs-8 col-sm-10">
-          <%= yield %>
-        </div>
-      </div>
+      <%= yield %>
     </div>
+
+
 
   </body>
 </html>
