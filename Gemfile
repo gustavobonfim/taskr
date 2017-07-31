@@ -35,6 +35,8 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'devise'
+# for linking recognition
+gem 'auto_html', '~>1.6.4'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
