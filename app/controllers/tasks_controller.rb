@@ -12,7 +12,7 @@ class TasksController < ApplicationController
     @task = current_user.tasks.new(tasks_params)
     if @task.save
       flash[:success] = "Task successfully created!"
-      redirect_to task_path(@task)
+      redirect_to tasks_path
     else
       render 'new'
     end

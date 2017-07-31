@@ -1,3 +1,14 @@
+<!-- <% flash.each do |name, msg| %>
+  <div class="panel panel-<%=name%>">
+    <div class="panel-body">
+    <%= msg %>
+    </div>
+  </div>
+<% end %> -->
+
 <% flash.each do |name, msg| %>
-  <%= msg %>
+  <div class="alert alert-<%=name%> alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= msg %>
+  </div>
 <% end %>
