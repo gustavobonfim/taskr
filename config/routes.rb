@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # get '/about', to: 'pages#about'
   get '/about' => 'pages#about'
   get '/dashboard' => 'pages#dashboard'
+  get '/test' => 'pages#test'
 
 
 

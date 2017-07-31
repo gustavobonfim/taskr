@@ -6,30 +6,7 @@
     <tr>
       <th>Content</th>
     </tr>
-    <% @to_do.each do |task| %>
-    <tr class="well">
-      <td>
-        <%= task.content %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <small>
-          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-xs" %>
-        </small>
-        <small>
-          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-xs" %>
-        </small>
-        <small>
-          <%= link_to 'Delete', task_path(task), method: :delete, class: "btn btn-danger btn-xs",
-                                                data: {confirm: "Are you sure you want to delete?"}%>
-        </small>
-        <small>
-          <%= link_to 'Mark as Doing', change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-xs"%>
-        </small>
-      </td>
-    </tr>
-    <% end %>
+    <%= render @to_do %>
   </table>
 </div>
 
@@ -41,33 +18,7 @@
     <tr>
       <th>Content</th>
     </tr>
-    <% @doing.each do |task| %>
-    <tr class="well">
-      <td>
-        <%= task.content %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <small>
-          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-xs" %>
-        </small>
-        <small>
-          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-xs" %>
-        </small>
-        <small>
-          <%= link_to 'Delete', task_path(task), method: :delete, class: "btn btn-danger btn-xs",
-                                                data: {confirm: "Are you sure you want to delete?"}%>
-        </small>
-        <small>
-          <%= link_to 'Mark as To Do', change_task_path(task, state: "to_do"), method: :put, class: "btn btn-info btn-xs"%>
-        </small>
-        <small>
-          <%= link_to 'Mark as Done', change_task_path(task, state: "done"), method: :put, class: "btn btn-success btn-xs"%>
-        </small>
-      </td>
-    </tr>
-    <% end %>
+    <%= render @doing %>
   </table>
 </div>
 
@@ -78,29 +29,6 @@
     <tr>
       <th>Content</th>
     </tr>
-    <% @done.each do |task| %>
-    <tr class="well">
-      <td>
-        <%= task.content %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <small>
-          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-xs" %>
-        </small>
-        <small>
-          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-xs" %>
-        </small>
-        <small>
-          <%= link_to 'Delete', task_path(task), method: :delete, class: "btn btn-danger btn-xs",
-                                                data: {confirm: "Are you sure you want to delete?"}%>
-        </small>
-        <small>
-          <%= link_to 'Mark as Doing', change_task_path(task, state: "doing"), method: :put, class: "btn btn-info btn-xs"%>
-        </small>
-      </td>
-    </tr>
-    <% end %>
+    <%= render @done %>
   </table>
 </div>
