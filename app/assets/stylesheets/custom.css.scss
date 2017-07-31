@@ -52,8 +52,8 @@ footer {
 
 #side1 {
   background-color: #086bac;
-  padding-top: 20px;
-  border: 0px;
+  padding: 20px 5px 20px 10px;
+  border: 1px solid #086bac;
   text-align: center;
   color: #fbfcff;
 
@@ -61,8 +61,17 @@ footer {
 
 #side2 {
   background-color: #086bac;
-  padding-bottom: 20px;
-  border: 0px;
+  padding: 20px 10px 20px 5px;
+  border: 1px solid #086bac;
   text-align: center;
   color: #fbfcff;
+}
+
+.listing {
+  list-style-type: none;
+  text-align: center;
+}
+
+.dash {
+  border: 1px solid black;
 }

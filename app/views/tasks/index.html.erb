@@ -1,9 +1,57 @@
-<div class="container col-md-12">
-  <% @tasks.each do |task| %>
-    <div class="well">
-      <%= task.content %>
-      <hr />
-      <%= task.created_at %>
-    </div>
-  <% end %>
+<div class="container col-sm-2 dash">
+  <table>
+    <tr>
+      <th>Content</th>
+    </tr>
+
+    <% @tasks.each do |task| %>
+    <tr>
+      <td class="well">
+        <%= task.content %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <small>
+          <%= time_ago_in_words(task.created_at) %> ago
+        </small>
+        <small>
+          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-sm" %>
+        </small>
+        <small>
+          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-sm" %>
+        </small>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="container col-md-2 dash">
+  <table>
+    <tr>
+      <th>Content</th>
+    </tr>
+
+    <% @tasks.each do |task| %>
+    <tr>
+      <td class="well">
+        <%= task.content %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <small>
+          <%= time_ago_in_words(task.created_at) %> ago
+        </small>
+        <small>
+          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-sm" %>
+        </small>
+        <small>
+          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-sm" %>
+        </small>
+      </td>
+    </tr>
+    <% end %>
+  </table>
 </div>

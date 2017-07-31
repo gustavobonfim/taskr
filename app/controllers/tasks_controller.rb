@@ -8,15 +8,32 @@ class TasksController < ApplicationController
     @task = Task.new(tasks_params)
     if @task.save
       flash[:success] = "Task successfully created!"
-      redirect_to tasks_path
+      redirect_to task_path(@task)
     else
-      flash[:danger] = "Task not created!"
       render 'new'
     end
   end
 
   def index
     @tasks = Task.all
+  end
+
+  def show
+    @task = Task.find(params[:id])
+  end
+
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    if @task.update(tasks_params)
+      flash[:success] = "Task updated successfully"
+      redirect_to tasks_path
+    else
+      render 'edit'
+    end
   end
 
   private

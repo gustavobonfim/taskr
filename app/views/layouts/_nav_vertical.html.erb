@@ -1,17 +1,25 @@
 <div class="container">
   <div class="row row-offcanvas row-offcanvas-left">
-    <div class=" col-sm-1 sidebar-offcanvas" id="sidebar" role="navigation">
+    <div class=" col-xs-2 sidebar-offcanvas" id="sidebar" role="navigation">
       <div class="sidebar-nav">
         <ul class="nav nav-list">
-          <li class="active"><a href="#">Link</a></li>
+          <li>
+            <%= link_to 'New Task', new_task_path, html: {class: "btn btn-default glyphicon glyphicon-tasks"} %>
+          </li>
           <li>
             <%= link_to 'About', about_path %>
           </li>
           <li>
-            <a href="#" class="glyphicon glyphicon-tasks" id="side1"></a>
-            <p id="side2">Task</p>
+
+            <button type="button" class="btn btn-primary" aria-label="Left Align" id="side1">
+              <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> New Task
+            </button>
+
+
+
+
           </li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#" class="list-item-group">Link</a></li>
           <li class="nav-divider"></li>
           <li><a href="#">Link</a></li>
         </ul>
