@@ -1,16 +1,78 @@
-<h3 class="well text-center">All Tasks</h3>
-<div class="container col-sm-2 dash">
+<!-- <h3 class="well text-center">All Tasks</h3> -->
+<div class="container col-sm-4 dash">
+  <h3>To DO</h3>
 
   <table>
     <tr>
       <th>Content</th>
     </tr>
-
-    <% @tasks.each do |task| %>
-    <tr>
-      <td class="well">
+    <% @to_do.each do |task| %>
+    <tr class="well">
+      <td>
         <%= task.content %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <small>
+          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-xs" %>
+        </small>
+        <small>
+          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-xs" %>
+        </small>
+        <small>
+          <%= link_to 'Delete', task_path(task), method: :delete, class: "btn btn-danger btn-xs",
+                                                data: {confirm: "Are you sure you want to delete?"}%>
+        </small>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
 
+
+<div class="container col-sm-4 dash">
+  <h3>Doing</h3>
+
+  <table>
+    <tr>
+      <th>Content</th>
+    </tr>
+    <% @doing.each do |task| %>
+    <tr class="well">
+      <td>
+        <%= task.content %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <small>
+          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-warning btn-xs" %>
+        </small>
+        <small>
+          <%= link_to 'Show', task_path(task), class: "btn btn-primary btn-xs" %>
+        </small>
+        <small>
+          <%= link_to 'Delete', task_path(task), method: :delete, class: "btn btn-danger btn-xs",
+                                                data: {confirm: "Are you sure you want to delete?"}%>
+        </small>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="container col-sm-4 dash">
+  <h3>Done</h3>
+
+  <table>
+    <tr>
+      <th>Content</th>
+    </tr>
+    <% @done.each do |task| %>
+    <tr class="well">
+      <td>
+        <%= task.content %>
       </td>
     </tr>
     <tr>

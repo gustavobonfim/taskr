@@ -18,8 +18,12 @@
             <%= render 'layouts/nav_vertical' %>
           </div>
           <div class="col-sm-10">
-            <%= render 'layouts/messages' %>
-            <%= yield %>
+            <div class="row">
+              <%= render 'layouts/messages' %>
+            </div>
+            <div class="row col-md-12">
+              <%= yield %>
+            </div>
           </div>
         </div>
       </div>

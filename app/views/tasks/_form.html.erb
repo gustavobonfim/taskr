@@ -13,7 +13,11 @@
 
   <%= f.input :content, autofocus: true, presence: true,
                       label: false, placeholder: "Tell us the task"%>
-  <%= f.button :submit, "Update", class: "btn btn-primary btn-block" %>
+
+  <%= f.input :state, presence: true,
+                    label: false, placeholder: "State"%>
+
+  <%= f.button :submit, (@task.new_record? ? "Create" : "Update"), class: "btn btn-primary btn-block" %>
 
 <% end %>
 
