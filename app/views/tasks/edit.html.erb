@@ -1,27 +1,6 @@
 <div class="container text-center col-md-12">
+  <h3>Edit Task</h3>
 
-  <% if @task.errors.any? %>
-    <h4>Something went wrong!</h4>
-    <ul class="listing">
-      <% @task.errors.full_messages.each do |msg| %>
-        <li>
-          <%= msg %>
-        </li>
-      <% end %>
-    </ul>
+  <%= render 'form' %>
 
-  <% end %>
-
-
-  <h1>This is a new taks</h1>
-
-  <%= simple_form_for(@task, html: {class: "form-signin"}) do |f| %>
-
-    <%= f.input :content, autofocus: true, presence: true,
-                        label: false, placeholder: "Tell us the task"%>
-    <%= f.button :submit, "Update", class: "btn btn-primary btn-block" %>
-
-  <% end %>
-
-  [<%= link_to 'Cancel request and back to Dashboard', tasks_path %>]
 </div>
